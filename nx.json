@@ -137,9 +137,10 @@
     "version": {
       "preVersionCommand": "pnpm dlx nx run-many -t build",
       "generatorOptions": {
-        "currentVersionResolver": "git-tag",
+        "currentVersionResolver": "disk",
         "specifierSource": "conventional-commits",
-        "fallbackCurrentVersionResolver": "disk"
+        "fallbackCurrentVersionResolver": "disk",
+        "prerelease": "beta"
       }
     },
     "changelog": {
@@ -163,7 +164,7 @@
       "commit": true,
       "tag": true
     },
-    "projects": ["libs/*"],
+    "projects": ["*"],
     "releaseTagPattern": "v{version}"
   },
   "packageManager": "pnpm",
