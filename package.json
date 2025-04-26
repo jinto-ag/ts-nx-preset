@@ -1,6 +1,6 @@
 {
   "name": "@ts-nx-preset/source",
-  "version": "0.1.0",
+  "version": "0.1.0-beta.1",
   "license": "MIT",
   "scripts": {
     "lint": "nx run-many -t lint --projects=* --exclude=.",
@@ -20,6 +20,8 @@
     "version:major": "nx version major",
     "release": "nx release",
     "release:dry-run": "nx release --dry-run",
+    "release:beta": "nx release --preid=beta",
+    "release:beta:dry-run": "nx release --preid=beta --dry-run",
     "graph": "nx graph",
     "deps-graph": "nx dep-graph",
     "typecheck": "nx run-many -t typecheck --all",
