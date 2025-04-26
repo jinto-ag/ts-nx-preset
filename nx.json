@@ -136,7 +136,7 @@
     "version": {
       "preVersionCommand": "pnpm dlx nx run-many -t build",
       "generatorOptions": {
-        "currentVersionResolver": "disk",
+        "currentVersionResolver": "git-tag",
         "specifierSource": "conventional-commits",
         "fallbackCurrentVersionResolver": "disk",
         "prerelease": "beta"
