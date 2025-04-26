@@ -1,0 +1,103 @@
+{
+  "name": "@j-org/source",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "lint": "nx run-many -t lint --projects=* --exclude=.",
+    "prepare": "husky",
+    "commit": "git-cz",
+    "gitmoji": "gitmoji -c",
+    "lint-staged": "lint-staged",
+    "affected:lint": "nx affected -t lint",
+    "affected:test": "nx affected -t test",
+    "affected:build": "nx affected -t build",
+    "affected:check": "nx affected -t lint,test,build",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,scss}\"",
+    "validate": "nx run-many -t lint,test,build --all",
+    "version": "nx version",
+    "version:patch": "nx version patch",
+    "version:minor": "nx version minor",
+    "version:major": "nx version major",
+    "release": "nx release",
+    "release:dry-run": "nx release --dry-run",
+    "graph": "nx graph",
+    "deps-graph": "nx dep-graph",
+    "typecheck": "nx run-many -t typecheck --all",
+    "affected:e2e": "nx affected -t e2e",
+    "reset-cache": "nx reset",
+    "affected:graph": "nx affected:dep-graph"
+  },
+  "private": true,
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@commitlint/config-lerna-scopes": "^19.7.0",
+    "@commitlint/cz-commitlint": "^19.8.0",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.25.1",
+    "@nx/eslint": "20.8.0",
+    "@nx/eslint-plugin": "20.8.0",
+    "@nx/js": "20.8.0",
+    "@nx/plugin": "20.8.0",
+    "@nx/react": "20.8.0",
+    "@nx/rollup": "20.8.0",
+    "@nx/vite": "20.8.0",
+    "@nx/web": "20.8.0",
+    "@swc-node/register": "~1.10.10",
+    "@swc/cli": "~0.6.0",
+    "@swc/core": "~1.11.22",
+    "@swc/helpers": "~0.5.11",
+    "@types/node": "22.14.1",
+    "@typescript-eslint/eslint-plugin": "^8.31.0",
+    "@typescript-eslint/parser": "^8.31.0",
+    "@vitest/coverage-v8": "^3.1.2",
+    "@vitest/ui": "^3.1.2",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.25.1",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-perf-standard": "^1.0.3",
+    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-security": "^3.0.1",
+    "gitmoji-cli": "^9.6.0",
+    "husky": "^9.1.7",
+    "jiti": "2.4.2",
+    "jsdom": "~22.1.0",
+    "jsonc-eslint-parser": "^2.4.0",
+    "lint-staged": "^15.5.1",
+    "nx": "20.8.0",
+    "prettier": "^3.5.3",
+    "rollup": "^4.40.0",
+    "swc-loader": "0.1.15",
+    "tslib": "^2.8.1",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.31.0",
+    "verdaccio": "^6.1.2",
+    "vite": "^6.3.3",
+    "vitest": "^3.1.2"
+  },
+  "nx": {
+    "includedScripts": [
+      "lint"
+    ],
+    "targets": {
+      "local-registry": {
+        "executor": "@nx/js:verdaccio",
+        "options": {
+          "port": 4873,
+          "config": ".verdaccio/config.yml",
+          "storage": "tmp/local-registry/storage"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "@nx/devkit": "20.8.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}

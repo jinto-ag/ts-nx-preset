@@ -1,0 +1,171 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "production": [
+      "default",
+      "!{projectRoot}/.eslintrc.json",
+      "!{projectRoot}/eslint.config.mjs",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/src/test-setup.[jt]s"
+    ],
+    "sharedGlobals": [
+      "{workspaceRoot}/.github/workflows/ci.yml",
+      "{workspaceRoot}/pnpm-lock.yaml",
+      "{workspaceRoot}/package.json",
+      "{workspaceRoot}/pnpm-workspace.yaml",
+      "{workspaceRoot}/nx.json",
+      "{workspaceRoot}/version.json"
+    ],
+    "test": [
+      "default",
+      "{workspaceRoot}/jest.config.ts",
+      "{workspaceRoot}/vitest.workspace.ts",
+      "{projectRoot}/jest.config.[jt]s",
+      "{projectRoot}/vitest.config.[jt]s",
+      "{projectRoot}/tsconfig.spec.json"
+    ],
+    "lint": [
+      "{projectRoot}/**/*.{js,ts,jsx,tsx,json,md,html,css,scss}",
+      "{projectRoot}/.eslintrc.json",
+      "{projectRoot}/eslint.config.mjs",
+      "{workspaceRoot}/eslint.base.config.mjs",
+      "{workspaceRoot}/eslint.config.mjs"
+    ]
+  },
+  "nxCloudId": "6808cc4e5912c1602365e94b",
+  "plugins": [
+    {
+      "plugin": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.lib.json",
+          "buildDepsName": "build-deps",
+          "watchDepsName": "watch-deps"
+        }
+      }
+    },
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "plugin": "@nx/react/router-plugin",
+      "options": {
+        "buildTargetName": "build",
+        "devTargetName": "dev",
+        "startTargetName": "start",
+        "watchDepsTargetName": "watch-deps",
+        "buildDepsTargetName": "build-deps",
+        "typecheckTargetName": "typecheck"
+      }
+    },
+    {
+      "plugin": "@nx/rollup/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
+      }
+    },
+    {
+      "plugin": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "devTargetName": "dev",
+        "previewTargetName": "preview",
+        "serveStaticTargetName": "serve-static",
+        "typecheckTargetName": "typecheck",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
+      }
+    }
+  ],
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"],
+      "outputs": [
+        "{workspaceRoot}/dist/{projectRoot}",
+        "{workspaceRoot}/dist/out-tsc/{projectRoot}"
+      ]
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "inputs": ["test", "^production"],
+      "outputs": [
+        "{workspaceRoot}/dist/coverage/{projectRoot}",
+        "{workspaceRoot}/dist/test-results/{projectRoot}"
+      ]
+    },
+    "lint": {
+      "inputs": ["lint"],
+      "cache": true
+    },
+    "typecheck": {
+      "inputs": ["default", "^production"],
+      "outputs": ["{workspaceRoot}/dist/out-tsc/{projectRoot}"]
+    },
+    "e2e": {
+      "inputs": ["default", "^production"],
+      "outputs": [
+        "{workspaceRoot}/dist/e2e/{projectRoot}",
+        "{workspaceRoot}/dist/playwright-report/{projectRoot}"
+      ]
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    },
+    "@nx/js:swc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    }
+  },
+  "release": {
+    "version": {
+      "preVersionCommand": "pnpm dlx nx run-many -t build",
+      "generatorOptions": {
+        "currentVersionResolver": "git-tag",
+        "specifierSource": "conventional-commits",
+        "fallbackCurrentVersionResolver": "disk"
+      }
+    },
+    "changelog": {
+      "workspaceChangelog": {
+        "createRelease": "github",
+        "file": "CHANGELOG.md"
+      },
+      "projectChangelogs": true,
+      "automaticFromRef": true,
+      "formatOptions": {
+        "commitUrlFormat": "{{host}}/{{owner}}/{{repository}}/commit/{{hash}}",
+        "issueUrlFormat": "{{host}}/{{owner}}/{{repository}}/issues/{{id}}",
+        "userUrlFormat": "{{host}}/{{user}}",
+        "compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",
+        "issuePrefix": "#",
+        "includeDateInTitle": true
+      }
+    },
+    "projectsRelationship": "fixed",
+    "git": {
+      "commit": true,
+      "tag": true
+    },
+    "projects": ["libs/*"],
+    "releaseTagPattern": "v{version}"
+  },
+  "packageManager": "pnpm",
+  "defaultBase": "main"
+}
