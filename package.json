@@ -27,7 +27,8 @@
     "typecheck": "nx run-many -t typecheck --all",
     "affected:e2e": "nx affected -t e2e",
     "reset-cache": "nx reset",
-    "affected:graph": "nx affected:dep-graph"
+    "affected:graph": "nx affected:dep-graph",
+    "update:nx": "./tools/nx-update.sh"
   },
   "private": true,
   "devDependencies": {

@@ -1,0 +1,41 @@
+version: 2
+updates:
+  # Configure npm updates
+  - package-ecosystem: 'npm'
+    # Look for package.json and lock files in the root directory
+    directory: '/'
+    # Check for updates once a week (you can adjust based on your needs)
+    schedule:
+      interval: 'weekly'
+      # Run on Monday to give you time during the week to review
+      day: 'monday'
+    # Group all minor and patch updates together to reduce PRs
+    groups:
+      dev-dependencies:
+        dependency-type: 'development'
+        update-types:
+          - 'minor'
+          - 'patch'
+      production-dependencies:
+        dependency-type: 'production'
+        update-types:
+          - 'minor'
+          - 'patch'
+    # Limit the number of open PRs to prevent overwhelming your CI
+    open-pull-requests-limit: 5
+    # Add reviewers for dependency updates
+    reviewers:
+      - 'jinto-ag'
+    # Labels to help identify PRs
+    labels:
+      - 'dependencies'
+      - 'automated'
+    # Configure PR commit message format
+    commit-message:
+      prefix: 'chore'
+      prefix-development: 'chore(dev)'
+      include: 'scope'
+    # Ignore updates to Nx packages (we'll handle these separately)
+    ignore:
+      - dependency-name: '@nx/*'
+      - dependency-name: 'nx'
