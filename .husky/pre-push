@@ -1,0 +1,32 @@
+#!/usr/bin/env sh
+
+# Get the current branch name
+BRANCH=$(git symbolic-ref --short HEAD)
+# Get the remote tracking branch or default to origin/main
+REMOTE_BRANCH=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null || echo "origin/main")
+
+echo "🔍 Running checks on affected projects before pushing..."
+echo "📊 Comparing changes between $REMOTE_BRANCH and $BRANCH"
+
+# Run tests on affected projects
+echo "🧪 Running tests on affected projects..."
+pnpm exec nx affected -t test --base=$REMOTE_BRANCH --head=$BRANCH
+TEST_EXIT_CODE=$?
+
+if [ $TEST_EXIT_CODE -ne 0 ]; then
+  echo "❌ Tests failed. Push aborted."
+  exit 1
+fi
+
+# Run build on affected projects
+echo "🏗️ Building affected projects..."
+pnpm exec nx affected -t build --base=$REMOTE_BRANCH --head=$BRANCH
+BUILD_EXIT_CODE=$?
+
+if [ $BUILD_EXIT_CODE -ne 0 ]; then
+  echo "❌ Build failed. Push aborted."
+  exit 1
+fi
+
+echo "✅ All checks passed! Pushing changes..."
+exit 0

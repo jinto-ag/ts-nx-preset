@@ -6,14 +6,14 @@
 | ----------- | --------------- |
 | Feature     | Release Process |
 | Created     | 2025-04-24      |
-| Author      | J-Org Team      |
+| Author      | Jinto A G       |
 | Last Update | 2025-04-24      |
 | Status      | Approved        |
 | Version     | 1.0.0           |
 
 ## Overview
 
-This document describes the automated release process for the J-Org project. Our release workflow automates versioning, changelog generation, and artifact publishing to ensure consistent and reliable releases.
+This document describes the automated release process for the TS-NX-Preset template project. Our release workflow automates versioning, changelog generation, and artifact publishing to ensure consistent and reliable releases.
 
 ## Features
 

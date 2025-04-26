@@ -1,0 +1,16 @@
+{
+  "*.{js,jsx,ts,tsx}": [
+    "node tools/nx-affected-filter.js lint",
+    "pnpm exec prettier --write"
+  ],
+  "*.{json,md}": [
+    "pnpm exec prettier --write"
+  ],
+  "*.{css,scss}": [
+    "node tools/nx-affected-filter.js format:styles",
+    "pnpm exec prettier --write"
+  ],
+  "*.html": [
+    "pnpm exec prettier --write"
+  ]
+}

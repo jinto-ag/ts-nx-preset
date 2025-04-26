@@ -1,0 +1,56 @@
+{
+  "changelog": {
+    "projectChangelogs": {
+      "createRelease": "github",
+      "linkCompare": true
+    }
+  },
+  "conventionalCommits": {
+    "types": {
+      "feat": {
+        "semverBump": "minor",
+        "section": "Features"
+      },
+      "fix": {
+        "semverBump": "patch",
+        "section": "Bug Fixes"
+      },
+      "docs": {
+        "semverBump": null,
+        "section": "Documentation"
+      },
+      "style": {
+        "semverBump": null,
+        "section": "Styles"
+      },
+      "refactor": {
+        "semverBump": null,
+        "section": "Code Refactoring"
+      },
+      "perf": {
+        "semverBump": "patch",
+        "section": "Performance Improvements"
+      },
+      "test": {
+        "semverBump": null,
+        "section": "Tests"
+      },
+      "build": {
+        "semverBump": null,
+        "section": "Build System"
+      },
+      "ci": {
+        "semverBump": null,
+        "section": "CI/CD"
+      },
+      "chore": {
+        "semverBump": null,
+        "section": "Chores"
+      },
+      "revert": {
+        "semverBump": "patch",
+        "section": "Reverts"
+      }
+    }
+  }
+}

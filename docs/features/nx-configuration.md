@@ -6,14 +6,14 @@
 | ----------- | ---------------- |
 | Feature     | Nx Configuration |
 | Created     | 2025-04-24       |
-| Author      | J-Org Team       |
+| Author      | Jinto A G        |
 | Last Update | 2025-04-24       |
 | Status      | Approved         |
 | Version     | 1.0.0            |
 
 ## Overview
 
-This document describes the Nx configuration used in the J-Org project. Nx is a build system with smart rebuilds and advanced caching that helps maintain a modular monorepo architecture, enabling efficient development workflows for multiple applications and libraries.
+This document describes the Nx configuration used in the TS-NX-Preset template project. Nx is a build system with smart rebuilds and advanced caching that helps maintain a modular monorepo architecture, enabling efficient development workflows for multiple applications and libraries.
 
 ## Features
 
@@ -69,10 +69,10 @@ This helps understand the impact of changes across the project ecosystem.
 
 ## Workspace Structure
 
-The J-Org workspace is organized according to Nx best practices:
+The TS-NX-Preset workspace is organized according to Nx best practices:
 
-```
-j-org/
+```txt
+ts-nx-preset/
 ├── apps/           # Application projects
 ├── libs/           # Shared libraries
 │   └── logging/    # Logging library

@@ -6,14 +6,14 @@
 | ----------- | -------------------- |
 | Feature     | ESLint Configuration |
 | Created     | 2025-04-24           |
-| Author      | J-Org Team           |
+| Author      | Jinto A G            |
 | Last Update | 2025-04-24           |
 | Status      | Approved             |
 | Version     | 1.0.0                |
 
 ## Overview
 
-This document describes the ESLint configuration used in the J-Org project. ESLint is configured to enforce consistent code style, catch common errors, and ensure best practices across all TypeScript and JavaScript code in the repository.
+This document describes the ESLint configuration used in the TS-NX-Preset template project. ESLint is configured to enforce consistent code style, catch common errors, and ensure best practices across all TypeScript and JavaScript code in the repository.
 
 ## Features
 

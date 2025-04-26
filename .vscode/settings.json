@@ -1,0 +1,132 @@
+{
+  // Editor: Formatting & Linting
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.useFlatConfig": true,
+  "prettier.requireConfig": true,
+  "prettier.configPath": ".prettierrc",
+  "prettier.enableDebugLogs": false,
+
+  // Editor: UI & Behavior
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "smooth",
+  "editor.renderLineHighlight": "none",
+  "editor.renderWhitespace": "boundary",
+  "editor.wordWrap": "off",
+  "editor.inlineSuggest.enabled": true,
+  "editor.linkedEditing": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.definitionLinkOpensInPeek": true,
+  "editor.suggest.preview": true,
+  "editor.suggest.showStatusBar": true,
+  "editor.quickSuggestionsDelay": 200,
+
+  // IntelliSense & TypeScript/JavaScript
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "typescript.tsserver.maxTsServerMemory": 8192,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "typescript.tsserver.useSyntaxServer": "auto",
+  "javascript.suggest.autoImports": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.suggest.paths": false,
+
+  // File Handling & Search
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/dist": false,
+    "**/build": true,
+    "**/.nx": true,
+    "**/.turbo": true,
+    "**/coverage": true,
+    "**/pnpm-lock.yaml": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/.git/**": true,
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/.nx/**": true,
+    "**/.turbo/**": true,
+    "**/coverage/**": true
+  },
+  "files.associations": {
+    "*.nx.json": "json"
+  },
+  "search.followSymlinks": false,
+
+  // Terminal Configuration
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh",
+      "icon": "terminal-bash"
+    }
+  },
+  "terminal.integrated.localEchoEnabled": "on",
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.scrollback": 1000,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.shellIntegration.decorationsEnabled": "both",
+  "terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
+
+  // Debugging
+  "debug.javascript.autoAttachFilter": "smart",
+  "debug.javascript.terminalOptions": {
+    "skipFiles": ["<node_internals>/**", "**/node_modules/**"]
+  },
+  "debug.console.fontSize": 14,
+  "debug.toolBarLocation": "docked",
+  "debug.inlineValues": "on",
+  "debug.showInStatusBar": "always",
+  "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+  "debug.terminal.clearBeforeReusing": true,
+  "debug.openDebug": "openOnDebugBreak",
+  "debug.onTaskErrors": "showErrors",
+
+  // Workbench & UI
+  "workbench.editor.pinnedTabsOnSeparateRow": true,
+  "workbench.editor.wrapTabs": true,
+  "workbench.editor.tabSizing": "fit",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.decorations.badges": true,
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.showTabs": "multiple",
+  "workbench.list.smoothScrolling": true,
+  "workbench.tree.indent": 12,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none",
+  "workbench.settings.editor": "ui",
+
+  // Extensions & Miscellaneous
+  "todo-tree.general.tags": ["TODO", "FIXME", "BUG"],
+  "git.enabled": true,
+  "gitlens.mode.active": "modern",
+  "gitlens.hovers.enabled": true,
+  "extensions.ignoreRecommendations": true,
+  "eslint.validate": ["json"]
+}

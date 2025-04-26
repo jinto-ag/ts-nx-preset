@@ -1,5 +1,5 @@
 {
-  "name": "@j-org/source",
+  "name": "@ts-nx-preset/source",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -35,19 +35,19 @@
     "@commitlint/cz-commitlint": "^19.8.0",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.25.1",
-    "@nx/eslint": "20.8.0",
-    "@nx/eslint-plugin": "20.8.0",
-    "@nx/js": "20.8.0",
-    "@nx/plugin": "20.8.0",
-    "@nx/react": "20.8.0",
-    "@nx/rollup": "20.8.0",
-    "@nx/vite": "20.8.0",
-    "@nx/web": "20.8.0",
-    "@swc-node/register": "~1.10.10",
-    "@swc/cli": "~0.6.0",
-    "@swc/core": "~1.11.22",
-    "@swc/helpers": "~0.5.11",
-    "@types/node": "22.14.1",
+    "@nx/eslint": "20.8.1",
+    "@nx/eslint-plugin": "20.8.1",
+    "@nx/js": "20.8.1",
+    "@nx/plugin": "20.8.1",
+    "@nx/react": "20.8.1",
+    "@nx/rollup": "20.8.1",
+    "@nx/vite": "20.8.1",
+    "@nx/web": "20.8.1",
+    "@swc-node/register": "^1.10.10",
+    "@swc/cli": "^0.6.0",
+    "@swc/core": "^1.11.22",
+    "@swc/helpers": "^0.5.11",
+    "@types/node": "22.15.2",
     "@typescript-eslint/eslint-plugin": "^8.31.0",
     "@typescript-eslint/parser": "^8.31.0",
     "@vitest/coverage-v8": "^3.1.2",
@@ -66,19 +66,22 @@
     "gitmoji-cli": "^9.6.0",
     "husky": "^9.1.7",
     "jiti": "2.4.2",
-    "jsdom": "~22.1.0",
+    "jsdom": "^22.1.0",
     "jsonc-eslint-parser": "^2.4.0",
     "lint-staged": "^15.5.1",
-    "nx": "20.8.0",
+    "nx": "20.8.1",
     "prettier": "^3.5.3",
     "rollup": "^4.40.0",
     "swc-loader": "0.1.15",
     "tslib": "^2.8.1",
-    "typescript": "~5.8.3",
+    "typescript": "^5.8.3",
     "typescript-eslint": "^8.31.0",
     "verdaccio": "^6.1.2",
     "vite": "^6.3.3",
     "vitest": "^3.1.2"
+  },
+  "engines": {
+    "node": ">=22.0.0"
   },
   "nx": {
     "includedScripts": [
@@ -96,7 +99,7 @@
     }
   },
   "dependencies": {
-    "@nx/devkit": "20.8.0",
+    "@nx/devkit": "20.8.1",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   }

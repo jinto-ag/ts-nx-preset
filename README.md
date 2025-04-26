@@ -1,10 +1,10 @@
-# J-Org
+# TS-NX-Preset
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
 ## Overview
 
-J-Org is an organization-level monorepo powered by Nx, designed to host shared libraries, tools, and utilities. This repository provides a solid foundation for scalable JavaScript/TypeScript development with built-in support for:
+TS-NX-Preset is a template repository for TypeScript monorepo projects powered by Nx. It provides a solid foundation for scaffolding scalable JavaScript/TypeScript development environments with built-in support for:
 
 - Consistent code quality through ESLint and Prettier configurations
 - Structured commit messages using Conventional Commits

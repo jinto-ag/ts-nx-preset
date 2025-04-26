@@ -1,8 +1,8 @@
-# J-Org Project Documentation
+# TS-NX-Preset Project Documentation
 
 ## Overview
 
-This directory contains comprehensive documentation for the J-Org project, its features, libraries, and components. The documentation is organized in a way that supports future integration with documentation tools like VitePress.
+This directory contains comprehensive documentation for the TS-NX-Preset template project, its features, libraries, and components. The documentation is organized in a way that supports future integration with documentation tools like VitePress.
 
 ## Documentation Structure
 

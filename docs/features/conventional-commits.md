@@ -6,14 +6,14 @@
 | ----------- | -------------------- |
 | Feature     | Conventional Commits |
 | Created     | 2025-04-24           |
-| Author      | J-Org Team           |
+| Author      | Jinto A G            |
 | Last Update | 2025-04-24           |
 | Status      | Approved             |
 | Version     | 1.0.0                |
 
 ## Overview
 
-This document describes the Conventional Commits standard used in the J-Org project. Conventional Commits provides a standardized format for commit messages, making them machine-readable for automated tools while improving human readability and project history.
+This document describes the Conventional Commits standard used in the TS-NX-Preset template project. Conventional Commits provides a standardized format for commit messages, making them machine-readable for automated tools while improving human readability and project history.
 
 ## Features
 
@@ -57,7 +57,7 @@ The scope provides additional contextual information specifying the section of t
 feat(logging): add support for custom log formatters
 ```
 
-Common scopes in J-Org include:
+Common scopes in TS-NX-Preset include:
 
 - `logging` - Logging library
 - `config` - Configuration systems

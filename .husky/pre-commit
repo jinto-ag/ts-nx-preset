@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+echo "🔍 Running pre-commit checks..."
+
+# Run lint-staged to check code quality on affected files
+pnpm exec lint-staged
+
+# Exit with success
+exit 0

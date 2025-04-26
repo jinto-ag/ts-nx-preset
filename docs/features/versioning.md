@@ -6,14 +6,14 @@
 | ----------- | ----------------- |
 | Feature     | Versioning System |
 | Created     | 2025-04-24        |
-| Author      | J-Org Team        |
+| Author      | Jinto A G         |
 | Last Update | 2025-04-24        |
 | Status      | Approved          |
 | Version     | 1.0.0             |
 
 ## Overview
 
-This document describes the versioning system used in the J-Org project. The versioning system ensures consistent and predictable version numbers across all project components and follows semantic versioning principles.
+This document describes the versioning system used in the TS-NX-Preset template project. The versioning system ensures consistent and predictable version numbers across all project components and follows semantic versioning principles.
 
 ## Features
 

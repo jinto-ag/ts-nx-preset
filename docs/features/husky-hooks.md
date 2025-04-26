@@ -6,14 +6,14 @@
 | ----------- | ----------- |
 | Feature     | Husky Hooks |
 | Created     | 2025-04-24  |
-| Author      | J-Org Team  |
+| Author      | Jinto A G   |
 | Last Update | 2025-04-24  |
 | Status      | Approved    |
 | Version     | 1.0.0       |
 
 ## Overview
 
-This document describes the Husky Git hooks configuration used in the J-Org project. Husky enables automatic running of scripts during different Git lifecycle events, ensuring code quality, consistency, and preventing problematic commits from entering the codebase.
+This document describes the Husky Git hooks configuration used in the TS-NX-Preset template project. Husky enables automatic running of scripts during different Git lifecycle events, ensuring code quality, consistency, and preventing problematic commits from entering the codebase.
 
 ## Features
 

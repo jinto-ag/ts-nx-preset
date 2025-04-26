@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+echo "📝 Validating commit message format..."
+
+# Lint commit messages with commitlint
+pnpm exec commitlint --edit ${1}
+
+# Exit status is handled automatically

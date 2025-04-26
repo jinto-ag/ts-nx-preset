@@ -102,7 +102,12 @@ export default [
           ],
           pathGroups: [
             {
-              pattern: '@j-org/**',
+              pattern: '@ts-nx-preset/**',
+              group: 'internal',
+              position: 'before',
+            },
+            {
+              pattern: '@ts-nx-preset/**',
               group: 'internal',
               position: 'before',
             },
