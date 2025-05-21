@@ -1,7 +1,5 @@
 # TS-NX-Preset
 
-> **BETA NOTICE**: This project is currently in beta version (0.1.0-beta.1). APIs may change before the stable release. Please report any issues on our GitHub repository.
-
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
 ## Overview
