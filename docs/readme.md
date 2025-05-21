@@ -17,14 +17,15 @@ All documentation follows a consistent format defined in [documentation-template
 
 ### Features
 
-| Feature                                                    | Description                         | Status   |
-| ---------------------------------------------------------- | ----------------------------------- | -------- |
-| [Nx Configuration](./features/nx-configuration.md)         | Monorepo build system configuration | Complete |
-| [Versioning System](./features/versioning.md)              | Semantic versioning implementation  | Complete |
-| [Conventional Commits](./features/conventional-commits.md) | Standardized commit message format  | Complete |
-| [ESLint Configuration](./features/eslint-configuration.md) | Code quality and style enforcement  | Complete |
-| [Husky Hooks](./features/husky-hooks.md)                   | Git hooks for code quality          | Complete |
-| [Release Process](./features/releases.md)                  | Automated versioning and publishing | Complete |
+| Feature                                                        | Description                               | Status   |
+| -------------------------------------------------------------- | ----------------------------------------- | -------- |
+| [Project Initialization](./features/project-initialization.md) | Template initialization and customization | Complete |
+| [Nx Configuration](./features/nx-configuration.md)             | Monorepo build system configuration       | Complete |
+| [Versioning System](./features/versioning.md)                  | Semantic versioning implementation        | Complete |
+| [Conventional Commits](./features/conventional-commits.md)     | Standardized commit message format        | Complete |
+| [ESLint Configuration](./features/eslint-configuration.md)     | Code quality and style enforcement        | Complete |
+| [Husky Hooks](./features/husky-hooks.md)                       | Git hooks for code quality                | Complete |
+| [Release Process](./features/releases.md)                      | Automated versioning and publishing       | Complete |
 
 ### Libraries
 
