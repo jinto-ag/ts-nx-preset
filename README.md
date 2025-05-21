@@ -26,7 +26,7 @@ TS-NX-Preset is a template repository for TypeScript monorepo projects powered b
 
 ### Create a New Project from Template
 
-1. Click the "Use this template" button on the [ts-nx-preset GitHub repository](https://github.com/jinto--gag/ts-nx-preset) to create a new repository
+1. Click the "Use this template" button on the [ts-nx-preset GitHub repository](https://github.com/jinto-ag/ts-nx-preset) to create a new repository
 2. Clone your new repository locally:
    ```sh
    git clone https://github.com/yourusername/your-repo-name.git
