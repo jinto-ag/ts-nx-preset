@@ -33,7 +33,8 @@
     "rename:dry-run": "tsx tools/initialize.ts rename --dry-run",
     "rename:force": "tsx tools/initialize.ts rename --force",
     "initialize": "tsx tools/initialize.ts initialize",
-    "initialize:dry-run": "tsx tools/initialize.ts initialize --dry-run"
+    "initialize:dry-run": "tsx tools/initialize.ts initialize --dry-run",
+    "initialize:force": "tsx tools/initialize.ts initialize --force"
   },
   "private": true,
   "devDependencies": {
