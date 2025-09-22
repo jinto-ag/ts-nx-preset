@@ -75,7 +75,7 @@
     "gitmoji-cli": "^9.7.0",
     "husky": "^9.1.7",
     "jiti": "2.4.2",
-    "jsdom": "^26.1.0",
+    "jsdom": "^27.0.0",
     "jsonc-eslint-parser": "^2.4.0",
     "lint-staged": "^15.5.1",
     "nx": "21.1.0",
